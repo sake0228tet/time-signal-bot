@@ -25,8 +25,14 @@ MESSAGES = [
 # 現在時刻を取得
 # =========================
 now = datetime.now(ZoneInfo("Asia/Tokyo"))
-# 例：08:10 / 19:19 / 20:10
-current_time = now.strftime("%H:%M")
+# 20:10だけ「午後8:10」にする
+if now.hour == 20 and now.minute == 10:
+    current_time = "午後8:10"
+else:
+    # 例：
+    # 08:10 → 8:10
+    # 19:19 → 19:19
+    current_time = now.strftime("%H:%M").lstrip("0")
 # =========================
 # 前回の言葉を読み込む
 # =========================
