@@ -1,11 +1,6 @@
 name: Discord Time Signal
 on:
   workflow_dispatch:
-    inputs:
-      post_prefix:
-        description: "投稿する時刻"
-        required: true
-        default: "テスト"
 permissions:
   contents: write
 jobs:
@@ -23,7 +18,6 @@ jobs:
       - name: Discordへ投稿
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          POST_PREFIX: ${{ inputs.post_prefix }}
         run: python post.py
       - name: 前回の投稿を保存
         run: |
