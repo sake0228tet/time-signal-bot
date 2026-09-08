@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 # =========================
 TOKEN = os.environ["DISCORD_TOKEN"]
 # 本番用チャンネル
-CHANNEL_ID = "1546860346827083877"
+CHANNEL_ID = "1523123948613795974"
 # 投稿する言葉
 MESSAGES = [
     "いいよ!来いよ!",
